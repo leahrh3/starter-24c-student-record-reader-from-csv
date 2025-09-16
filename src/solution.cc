@@ -1,6 +1,20 @@
 #include "solution.hpp"
+#include <fstream>
 
 Student ReadStudentRecFromStream(std::istream& is) {
-  // your implementation here...
+  if (!is.isopen()) {
+    std::cerr << "Could not open" << is << std::endl;
+    return Student{};
+  }
+  while (is.good()) {
+    string first_name = "";
+    string last_name = "";
+    unsigned int uin = 0;
+    float gpa = 0;
+    char throw_away = '\0';
+    if (is.fail()) {
+      return Student{};
+    }
+  }
   return Student{};
 }
