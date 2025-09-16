@@ -1,5 +1,6 @@
 #include "solution.hpp"
 #include <fstream>
+#include <iostream>
 
 Student ReadStudentRecFromStream(std::istream& is) {
   if (!is.is_open()) {
