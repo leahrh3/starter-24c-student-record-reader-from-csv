@@ -1,12 +1,7 @@
 #include "solution.hpp"
 #include <fstream>
-#include <iostream>
 
 Student ReadStudentRecFromStream(std::istream& is) {
-  if (!is.is_open()) {
-    std::cerr << "Could not open" << is << std::endl;
-    return Student{};
-  }
   while (is.good()) {
     std::string first_name = "";
     std::string last_name = "";
