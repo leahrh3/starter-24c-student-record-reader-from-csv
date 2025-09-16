@@ -11,8 +11,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
     if (is.fail()) {
       return Student{};
     }
-    std::string full_name = first_name + " " + last_name;
-    return Student{full_name, uin, gpa};
+    return Student{(first_name + " " + last_name), uin, gpa};
   }
   return Student{};
 }
