@@ -9,7 +9,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
     float gpa = 0;
     char throw_away = '\0';
     is >> first_name >> throw_away >> last_name >> throw_away >> uin >> throw_away >> gpa;
-    if (is.fail()) {
+    if (is.fail() || throw_away != ',') {
       return Student{};
     }
     return Student{(first_name + " " + last_name), uin, gpa};
