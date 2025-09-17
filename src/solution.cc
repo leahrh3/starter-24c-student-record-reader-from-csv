@@ -8,6 +8,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
     unsigned int uin = 0;
     float gpa = 0;
     char throw_away = '\0';
+    ifs >> first_name >> throw_away >> last_name >> throw_away >> uin >> throw_away >> gpa;
     if (is.fail()) {
       return Student{};
     }
